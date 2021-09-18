@@ -8,8 +8,9 @@ module.exports = {
   aliases : ['h'],
   description: "Shows all available bot commands.",
   run: async (client, message, args) => {
+let prefix = db.get(`prefix_${message.guild.id}`)
 
-const prefix = db.get(`prefix_${message.guild.id}`)
+if(prefix === null) prefix = "*"
 
     const roleColor =
       message.guild.me.displayHexColor === "#000000"
@@ -18,8 +19,18 @@ const prefix = db.get(`prefix_${message.guild.id}`)
 
     if (!args[0]) {
       let categories = [];
+ const diremojis = {
+   economy: `<:DOGE:887978747851046922>`,
+   utility: `<:Staff_Badge:888401163131682887>`,
+   games: `<:gamers_only_zone:888400618065133608>`,
+   roleplay: `<:roleplay:888401346720571412>`,
+   images: `<:SOUR:888402248298807326>`,
+   memes: `<:Lol_Derp:888401776519295018>`,
+ }
 
+ 
       readdirSync("./commands/").forEach((dir) => {
+        const editName = `${diremojis[dir]} ${dir.toLowerCase()}`
         const commands = readdirSync(`./commands/${dir}/`).filter((file) =>
           file.endsWith(".js")
         );
@@ -37,7 +48,7 @@ const prefix = db.get(`prefix_${message.guild.id}`)
         let data = new Object();
 
         data = {
-          name: dir.toUpperCase(),
+          name: editName,
           value: cmds.length === 0 ? "In progress." : cmds.join(" "),
         };
 
@@ -48,7 +59,7 @@ const prefix = db.get(`prefix_${message.guild.id}`)
         .setTitle(" Bot Commands")
         .addFields(categories)
         .setDescription(
-          `Use \`${prefix}help\` followed by a command name to get more additional information on a command. For example: \`${prefix} help ping\`.`
+          `Use \`${prefix}help\` followed by a command name to get more additional information on a command. For example: \`${prefix}help ping\`.`
         )
         .setFooter(
           `Requested by ${message.author.tag}`,

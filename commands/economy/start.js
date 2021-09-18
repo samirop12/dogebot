@@ -9,6 +9,7 @@ module.exports = {
 
     db.set(`user_${message.author.id}`, { bal: 0 })
     db.set(`bank_${message.author.id}`, { bank: 0})
+    db.set(`rank_${message.author.id}`, {rank: 0})
     message.reply("I have made an account for you, make sure you follow T&C For economy, good luck for your new journey")
  
     }

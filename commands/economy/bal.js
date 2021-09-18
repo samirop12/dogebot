@@ -12,6 +12,7 @@ module.exports = {
 
     else {
       const muser = message.mentions.users.first() || message.author;
+      if(muser.bot) return message.reply('a bot cannot hold a account')
     let bal = db.get(`user_${muser.id}.bal`)
  let bank = db.get(`bank_${muser.id}.bank`)
  if(bank === null) bank = 0

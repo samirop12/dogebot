@@ -14,6 +14,7 @@ module.exports = {
       let bal = db.get(`user_${message.author.id}.bal`)
       const muser = message.mentions.users.first()
     if(!muser) return message.channel.send('pls specify a user')
+          if(muser.bot) return message.channel.send('you cannot pay  a bot')
       const amount = args[1]
       if(!amount) return message.channel.send('pls specify a amount')
       if(bal < amount) {
@@ -22,6 +23,7 @@ module.exports = {
         db.subtract(`user_${message.author.id}.bal`, amount)
      db.add(`user_${muser.id}.bal`,amount)
     message.channel.send(`${muser} has been credited ${amount}<:DOGE:887978747851046922> by ${message.author.username}   `)
+    muser.send('you have been credited ${amount}  ')
     }
   }
 }

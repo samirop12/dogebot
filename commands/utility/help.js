@@ -20,7 +20,7 @@ if(prefix === null) prefix = "*"
     if (!args[0]) {
       let categories = [];
  const diremojis = {
-   economy: `<:DOGE:887978747851046922>`,
+   economy: `<:unknown:889006136878071879>`,
    utility: `<:Staff_Badge:888401163131682887>`,
    games: `<:gamers_only_zone:888400618065133608>`,
    roleplay: `<:roleplay:888401346720571412>`,
@@ -56,7 +56,7 @@ if(prefix === null) prefix = "*"
       });
 
       const embed = new MessageEmbed()
-        .setTitle(" Bot Commands")
+        .setTitle(`${message.client.commands.size} commands`)
         .addFields(categories)
         .setDescription(
           `Use \`${prefix}help\` followed by a command name to get more additional information on a command. For example: \`${prefix}help ping\`.`

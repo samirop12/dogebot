@@ -1,5 +1,12 @@
 const express = require('express')
 const app = express()
+ 
+app.get('/', function (req, res) {
+  res.send('Hello World')
+})
+ 
+app.listen(3000)
+
 const { Collection, Client, Discord } = require('discord.js')
 const client = new Client({disableEveryone: true})
 const fs = require('fs');
@@ -15,12 +22,11 @@ client.categories = fs.readdirSync("./commands/");
 client.once('ready', () => {
   
   client.user.setPresence({ activity: { name: 'can i be the best eco bot', type: 'LISTENING' }, status: "dnd"})
-    app.get('/', function (req, res) {
- res.send('Kindda bot is on')
+
 })
  
-app.listen(3000)
-})
+
+
 
 
 

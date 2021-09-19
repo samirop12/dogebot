@@ -10,7 +10,7 @@ module.exports = {
     let item = db.get(message.author.id, {item: [] })
     if(op === 'sword') {
       if(bal < 2000) {
-        return message.reply(' no enough money') 
+        return message.reply('poor guy you dont have enough money, work hard') 
          } else {
            
            db.push(message.author.id,"sword")

@@ -14,11 +14,11 @@ module.exports = {
     let bal = db.get(`user_${message.author.id}.bal`)
   let bank = db.get(`bank_${message.author.id}.bank`)
   const ch = args[0]
-  if(!ch) return message.reply('pls specify a certain amount')
+  if(!ch) return message.reply('you cannot withdraw 0 bruh ')
   if(bank < ch) {
-    message.reply('no enough money')
+    message.reply('your bank is empty kiddo')
   } else {
-    message.reply(`${ch}<:DOGE:887978747851046922> has been withdrawn `)
+    message.reply(`${ch}₹ has been withdrawn `)
     db.add(`user_${message.author.id}.bal`, ch)
     db.subtract(`bank_${message.author.id}.bank`, ch)
   }

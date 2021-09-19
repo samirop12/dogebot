@@ -18,8 +18,8 @@ module.exports = {
  if(bank === null) bank = 0
     const embed = new Discord.MessageEmbed()
     .setTitle(`${message.author.username}\'s coins `)
-    .addField('wallet',`<:DOGE:887978747851046922> ${bal} coins `)
-    .addField('bank',` <:DOGE:887978747851046922> ${bank} coins  `)
+    .addField('wallet',`₹ ${bal} `)
+    .addField('bank',` ₹ ${bank}   `)
     .setColor("YELLOW")
     
     .setTimestamp()

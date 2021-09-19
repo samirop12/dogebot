@@ -12,11 +12,11 @@ module.exports = {
 
     else {
       if(cooldown.has(message.author.id)) {
-        message.reply('claim your reward every 24hrs bruh')
+        message.reply('claim your reward every 24hrs bruh, dont be too much poor')
       } else {
               let money = Math.round(Math.random() * 1000)|| Math.round(Math.random()*0) || Math.round(Math.random()* 100)
           let bal = db.get(`user_${message.author.id}.bal`)
-        message.channel.send(`you claimed your daily reward, you got ${money} <:DOGE:887978747851046922> `)
+        message.channel.send(`you claimed your daily reward, you got ${money} ₹`)
         db.add(`user_${message.author.id}.bal`, money)
         cooldown.add(message.author.id)
         setTimeout(() => {

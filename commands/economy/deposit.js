@@ -7,7 +7,7 @@ module.exports = {
   usage: 'prefix=deposit',
   run : async(client, message, args) => {
           if (db.get(`user_${message.author.id}.bal`) === null) {
-      message.reply(`You need to first create an account using start cmd`)
+      message.reply(`You need to first create an account using start cmd use prefix+start to use  it `)
     }
 
     else {
@@ -18,7 +18,7 @@ if(!oo) return message.channel.send('pls specify a value to add')
 if(bal < oo) {
    message.channel.send('no enough money')
 } else {
- message.channel.send(`${oo}<:DOGE:887978747851046922> has been deposited to your bank `)
+ message.channel.send(`${oo}₹ has been deposited to your bank, wow `)
 db.add(`bank_${message.author.id}.bank`, oo)
  db.subtract(`user_${message.author.id}.bal`, oo)
 }

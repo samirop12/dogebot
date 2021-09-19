@@ -13,11 +13,11 @@ module.exports = {
     else {
        const muser = message.author;
       if(cooldown.has(message.author.id)) {
-        message.reply('pls wait 2hrs before using this command again')
+        message.reply('pls wait 2hrs before using this command again, working alot will kill you one day')
       } else {
         let bal = db.get(`user_${message.author.id}.bal`)
            let money = Math.round(Math.random() * 1000)|| Math.round(Math.random()*0) || Math.round(Math.random()* 100)
-        const jobs = [`you sold your kidney and got ${money} `,`you treated a patient and got ${money} `,`you worked in a film and got ${money} `,`you sold some drugs and got ${money} `]
+        const jobs = [`you sold your kidney and got ${money}₹ `,`you treated a patient and got ${money} ₹`,`you worked in a film and got ${money} ₹`,`you sold some drugs and got ${money} ₹`]
         const we = new Discord.MessageEmbed()
       .setDescription(jobs[Math.floor(Math.random() * jobs.length)])
       .setColor('RANDOM')

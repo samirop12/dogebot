@@ -5,6 +5,13 @@ module.exports = {
   description: 'to buy something from store',
   usage: 'prefix+buy',
   run : async(client, message, args) => {
+        if (db.get(`user_${message.author.id}.bal`) === null) {
+      message.reply(`You need to first create an account using start cmd`)
+    }
+
+    else {
+      
+ 
  const op = args.slice(0).join("  ")
     let bal = db.get(`user_${message.author.id}.bal`)
     let item = db.get(message.author.id, {item: [] })
@@ -20,3 +27,4 @@ module.exports = {
     }
   }
 }
+   }

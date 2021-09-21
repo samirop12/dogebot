@@ -5,6 +5,11 @@ module.exports = {
   description: 'to see items in shop',
   usage: 'prefix+shop',
   run : async(client, message, args) => {
+         if (db.get(`user_${message.author.id}.bal`) === null) {
+      message.reply(`You need to first create an account using start cmd`)
+    }
+
+    else {
     const em = new Discord.MessageEmbed()
     .setTitle('page 1')
     .setDescription('items')
@@ -19,6 +24,6 @@ if(ar === 'fishing rod') {
 
 
     
-
+  }
   }
 }

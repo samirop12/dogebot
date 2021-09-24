@@ -10,7 +10,7 @@ module.exports = {
      const am = args[0]
      if(!am) return message.channel.send('pls specify an amount')
      if(bal < am) {
-       message.channel.reply('no enough money')
+       message.channel.send('no enough money')
      } else {
   let topemo = [':grapes:,:grapes,:grapes',':apple:,:apple:,:apple:']
  let top = topemo[Math.floor(Math.random()* topemo.length)]

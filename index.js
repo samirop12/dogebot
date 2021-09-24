@@ -20,7 +20,7 @@ client.categories = fs.readdirSync("./commands/");
 });
 
 client.once('ready', () => {
-  
+  console.log('pls commit the changes to github')
   client.user.setPresence({ activity: { name: 'can i be the best fun  bot in Nepal', type: 'LISTENING' }, status: "dnd"})
 
 })

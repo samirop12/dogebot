@@ -56,7 +56,7 @@ if(prefix === null) prefix = "*"
       });
 
       const embed = new MessageEmbed()
-        .setTitle(`:mailbox_with_mail: help commands listed all commands `)
+        .setTitle(`:mailbox_with_mail: all commands`)
         .addFields(categories)
         .setDescription(
           `Use \`${prefix}help\` followed by a command name to get more additional information on a command. For example: \`${prefix}help ping\`.`

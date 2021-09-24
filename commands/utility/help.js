@@ -25,7 +25,7 @@ if(prefix === null) prefix = "*"
    games: `<:gamers_only_zone:888400618065133608>`,
    roleplay: `<:roleplay:888401346720571412>`,
    images: `<:SOUR:888402248298807326>`,
-   memes: `<:Lol_Derp:888401776519295018>`,
+   meme: `<:Lol_Derp:888401776519295018>`,
    gambling: `<:gamble_chips:890859090610380810>`,
  }
 

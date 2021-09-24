@@ -21,7 +21,7 @@ client.categories = fs.readdirSync("./commands/");
 
 client.once('ready', () => {
   
-  client.user.setPresence({ activity: { name: 'can i be the best eco bot', type: 'LISTENING' }, status: "dnd"})
+  client.user.setPresence({ activity: { name: 'can i be the best fun  bot in Nepal', type: 'LISTENING' }, status: "dnd"})
 
 })
  
@@ -39,7 +39,7 @@ let prefix = db.get(`prefix_${message.guild.id}`)
 
 if(prefix === null) prefix = "*"
 
-    if(message.author.bot) return;
+    if(message.author.bot) return
     if(!message.content.startsWith(prefix)) return;
     if(!message.guild) return;
     if(!message.member) message.member = await message.guild.fetchMember(message);

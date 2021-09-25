@@ -20,6 +20,7 @@ if(prefix === null) prefix = "*"
     if (!args[0]) {
       let categories = [];
  const diremojis = {
+      animals: ':dog:',
    economy: `<:unknown:889006136878071879>`,
    utility: `<:Staff_Badge:888401163131682887>`,
    games: `<:gamers_only_zone:888400618065133608>`,

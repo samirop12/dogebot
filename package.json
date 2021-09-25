@@ -9,7 +9,7 @@
     "bufferutil": "^4.0.3",
     "canvacord": "^5.2.3",
     "common-tags": "^1.8.0",
-    "discord-buttons": "^4.0.0",
+    "discord-buttons": "^3.2.1",
     "discord.js": "^12.5.3",
     "discord.js-buttons": "^1.0.0",
     "djs-games": "^1.6.8-old",

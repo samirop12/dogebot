@@ -30,7 +30,7 @@ module.exports = {
  .setDescription(emoji)
  message.channel.send(embed)
  db.add(`user_${message.author.id}.bal`,amount)
-db.subtract(`user_${message.author.id}.bal`,amount)
+db.subtract(`user_${message.author.id}.bal`,am)
      }
   }
 }

@@ -16,7 +16,7 @@ module.exports = {
     let bal = db.get(`user_${message.author.id}.bal`)
     let item = db.get(message.author.id, {item: [] })
     if(db.has('sword')) {
-      message.channel.send('you aleady own the item')
+     return message.channel.send('you aleady own the item')
     } else
      {
         if(op === 'sword') {

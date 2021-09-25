@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "anime-images-api": "^2.0.0",
     "ascii-table": "0.0.9",
     "bufferutil": "^4.0.3",
     "canvacord": "^5.2.3",

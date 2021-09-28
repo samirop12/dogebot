@@ -12,6 +12,7 @@ disbut(client);
   const random = t[Math.floor(Math.random()* t.length)]
   const em = new Discord.MessageEmbed()
   .setTitle('tip')
+  .setColor('RANDOM')
   .setDescription(random)
 
  message.channel.send(em)

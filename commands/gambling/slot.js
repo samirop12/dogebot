@@ -9,6 +9,7 @@ module.exports = {
      let bal = db.get(`user_${message.author.id}.bal`)
      const am = args[0]
      if(!am) return message.channel.send('pls specify an amount')
+     if(bal < 500) return message.channel.send('you must have more than 500')
      if(bal < am) {
        message.channel.send('no enough money')
      } else {

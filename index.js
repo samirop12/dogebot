@@ -63,4 +63,4 @@ if(message.channel.id === `${MUM}` &&
 
 
 });
-client.login('ODg3NjgyNzcwMzUxMDYzMDQw.YUHtAA._UZXMfOOlUZPwnZcSel1Vp9hgNs')
+client.login('secret')
